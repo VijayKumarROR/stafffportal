@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  qualification: MyString
+  date_of_birth: 2017-09-26
+  personal_email: MyString
+  company_email: MyString
+  skype: 1
+  mobile_number: 1
+  alternate_number: 1
+  permanent_address: MyText
+  residential_address: MyText
+  specialization: MyString
+  join_date: 2017-09-26
+  role: MyString
+  status: false
+  terminator: false
+  resigned: false
+  abscond: false
+  experience: MyString
+  terminate_date: 2017-09-26
+  employee_id: MyString
+  designation: MyString
+  bank_account: 1
+  pan_number: MyString
+  aadhar_number: 1
+  passport: MyString
+  signature: MyString
+
+two:
+  name: MyString
+  qualification: MyString
+  date_of_birth: 2017-09-26
+  personal_email: MyString
+  company_email: MyString
+  skype: 1
+  mobile_number: 1
+  alternate_number: 1
+  permanent_address: MyText
+  residential_address: MyText
+  specialization: MyString
+  join_date: 2017-09-26
+  role: MyString
+  status: false
+  terminator: false
+  resigned: false
+  abscond: false
+  experience: MyString
+  terminate_date: 2017-09-26
+  employee_id: MyString
+  designation: MyString
+  bank_account: 1
+  pan_number: MyString
+  aadhar_number: 1
+  passport: MyString
+  signature: MyString

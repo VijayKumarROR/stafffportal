@@ -1,0 +1,193 @@
+<%= stylesheet_link_tag "style" %>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<div class="container">
+
+<%= form_for(@portal) do |f| %>
+  <% if @portal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@portal.errors.count, "error") %> while being save:</h2>
+
+      <ul>
+      <% @portal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+   
+  &nbsp;
+  <div class="field">
+   <div class="col-sm-4"><%= f.label :name %><br></div>
+   <%= f.text_field :name, :id => 'name' %>
+  </div>&nbsp;
+
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :qualification %><br></div>
+    <%= f.text_field :qualification %>
+  </div>&nbsp;
+ 
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :date_of_birth %><br></div>
+    <%= f.date_select :date_of_birth, :start_year => 1975,:id => "datepicker1" %>
+  </div>&nbsp;
+ 
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :personal_email %><br></div>
+    <%= f.email_field :personal_email %>
+  </div>&nbsp;
+ 
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :company_email %><br></div>
+    <%= f.email_field :company_email %>
+  </div>&nbsp;
+ 
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :Skype_Id %><br></div>
+    <%= f.text_field :skype %>
+  </div>&nbsp;
+ 
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :mobile_number %><br></div>
+    <%= f.text_field :mobile_number %>
+  </div>&nbsp;
+ 
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :alternate_number %><br></div>
+    <%= f.text_field :alternate_number %>
+  </div>&nbsp;
+ 
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :permanent_address %><br></div>
+    <%= f.text_area :permanent_address %>
+  </div>&nbsp;
+ 
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :residential_address %><br></div>
+    <%= f.text_area :residential_address %>
+  </div>&nbsp;
+ 
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :specialization %><br></div>
+    <%= f.text_field :specialization %>
+  </div>&nbsp;
+ 
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :join_date %><br></div>
+    <%= f.text_field :join_date, :id => "datepicker" %>
+  </div>&nbsp;
+ 
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :role %><br></div>
+    <%= f.text_field :role %>
+  </div>
+ 
+  <div class="field">
+    <br>
+    <div class="col-sm-3"><label class="status" for="status"><%= t('status') %></label>
+      <%= f.radio_button  "status", "true", :checked => "checked" %>
+        <label class="label_for_status" for="add_status_true"><%= t('active') %></label>
+      <%= f.radio_button  "status", "false" %>
+        <label class="label_for_status" for="add_status_false"><%= t('inactive') %></label>
+  </div>
+ 
+  <div class="field">
+  <div class="col-sm-3"><label class="status" for="status"><%= t('terminator') %></label>
+      <%= f.radio_button  "terminator", "true", :checked => "checked" %>
+        <label class="label_for_terminator" for="add_terminator_true"><%= t('yes') %></label>
+      <%= f.radio_button  "terminator", "false" %>
+        <label class="label_for_terminator" for="add_terminator_false"><%= t('no') %></label>
+
+  </div>
+
+  <div class="field">
+    <div class="col-sm-3"><label class="status" for="status"><%= t('resigned') %></label>
+      <%= f.radio_button  "resigned", "true", :checked => "checked" %>
+        <label class="label_for_resigned" for="add_resigned_true"><%= t('yes') %></label>
+      <%= f.radio_button  "resigned", "false" %>
+        <label class="label_for_resigned" for="add_resigned_false"><%= t('no') %></label>
+
+  </div>
+
+  <div class="field">
+    <div class="col-sm-3"><label class="status" for="status"><%= t('abscond') %></label>
+      <%= f.radio_button  "abscond", "true", :checked => "checked" %>
+        <label class="label_for_abscond" for="add_abscond_true"><%= t('yes') %></label>
+      <%= f.radio_button  "abscond", "false" %>
+        <label class="label_for_abscond" for="add_abscond_false"><%= t('no') %></label>
+  </div>
+
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :experience %><br></div>
+    <%= f.text_field :experience %>
+  </div>&nbsp;
+  
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :terminate_date %><br></div>
+    <%= f.text_field :terminate_date, :id => "datepicker2" %>
+  </div>&nbsp;
+  
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :employee_id %><br></div>
+    <%= f.text_field :employee_id %>
+  </div>&nbsp;
+  
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :designation %><br></div>
+    <%= f.text_field :designation %>
+  </div>&nbsp;
+  
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :bank_account %><br></div>
+    <%= f.text_field :bank_account %>
+  </div>&nbsp;
+  
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :pan_number %><br></div>
+    <%= f.text_field :pan_number %>
+  </div>&nbsp;
+  
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :aadhar_number %><br></div>
+    <%= f.text_field :aadhar_number %>
+  </div>&nbsp;
+  
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :passport %><br></div>
+    <%= f.text_field :passport %>
+  </div>&nbsp;
+  
+  <div class="field">
+    <div class="col-sm-4"><%= f.label :signature %><br></div>
+    <%= f.text_field :signature %>
+  </div>&nbsp;
+  
+  <div class="actions">
+    <%= f.submit :onclick => "myFunction()" %>
+  </div>
+<% end %>
+</div>
+
+<script>
+$( function() {
+  $( "#datepicker" ).datepicker();
+  $( "#datepicker1" ).datepicker();
+  $( "#datepicker2" ).datepicker();
+} );
+
+ $(document).ready(function(){
+  alert('Fill all the fields before submit');
+  // $("#new_portal").validate({
+  // debug: true,
+  // rules: {
+  // "portal[name]": {required: true},
+  // "portal[personal_email]": {required: true, email: true},
+  // "portal[company_email]": {required: true, email: true}
+  // }
+  // });
+});
+</script>

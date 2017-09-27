@@ -1,0 +1,150 @@
+<%= stylesheet_link_tag "style" %>
+
+<div class="backgroundcolor">
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<p>
+ <div class="col-sm-4"><strong>Name:</strong> </div>&nbsp;
+  <%= @portal.name %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Qualification:</strong></div>&nbsp;
+  <%= @portal.qualification %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Date of birth:</strong></div>&nbsp;
+  <%= @portal.date_of_birth %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Personal email:</strong></div>&nbsp;
+  <%= @portal.personal_email %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Company email:</strong></div>&nbsp;
+  <%= @portal.company_email %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Skype:</strong></div>&nbsp;
+  <%= @portal.skype %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Mobile number:</strong></div>&nbsp;
+  <%= @portal.mobile_number %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Alternate number:</strong></div>&nbsp;
+  <%= @portal.alternate_number %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Permanent address:</strong></div>&nbsp;
+  <%= @portal.permanent_address %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Residential address:</strong></div>&nbsp;
+  <%= @portal.residential_address %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Specialization:</strong></div>&nbsp;
+  <%= @portal.specialization %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Join date:</strong></div>&nbsp;
+  <%= @portal.join_date %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Role:</strong></div>&nbsp;
+  <%= @portal.role %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Status:</strong></div>&nbsp;
+  <%= @portal.status %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Terminator:</strong></div>&nbsp;
+  <%= @portal.terminator %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Resigned:</strong></div>&nbsp;
+  <%= @portal.resigned %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Abscond:</strong></div>&nbsp;
+  <%= @portal.abscond %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Experience:</strong></div>&nbsp;
+  <%= @portal.experience %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Terminate date:</strong></div>&nbsp;
+  <%= @portal.terminate_date %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Employee:</strong></div>&nbsp;
+  <%= @portal.employee_id %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Designation:</strong></div>&nbsp;
+  <%= @portal.designation %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Bank account:</strong></div>&nbsp;
+  <%= @portal.bank_account %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Pan number:</strong></div>&nbsp;
+  <%= @portal.pan_number %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Aadhar number:</strong></div>&nbsp;
+  <%= @portal.aadhar_number %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Passport:</strong></div>&nbsp;
+  <%= @portal.passport %>
+</p>
+
+<p>
+  <div class="col-sm-4"><strong>Signature:</strong></div>&nbsp;
+  <%= @portal.signature %>
+</p>
+
+</div>
+</div>
+
+<div class="action">
+<%= link_to 'Edit', edit_portal_path(@portal) %>
+<%= link_to 'Back', portals_path %>
+</div>
+
+<style type="text/css">
+  .action
+  {
+    margin-left: 270px;
+  }
+</style>

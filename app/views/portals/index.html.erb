@@ -1,0 +1,56 @@
+<%= stylesheet_link_tag "style" %>
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.css">
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Employee List</h1>
+
+<table id="portal" class="responstable" border="0" width="100%" >
+  <thead>
+    <tr>
+      <th>SI.NO</th>
+      <th>Emp ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>Status</th>
+      <th>Join date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%i = 0%>
+    <% @portals.each do |portal| %>
+      <tr>
+        <td><%= i+=1%></td>
+        <td><%= portal.employee_id %></td>
+        <td><%= portal.name %></td>
+        <td><%= portal.personal_email %></td>
+        <td><%= portal.mobile_number %></td>
+        <td><%= portal.status %></td>
+        <td><%= portal.join_date %></td>
+        <td> <i class="fa fa-eye" aria-hidden="true"></i> <%= link_to 'Detail', portal %>&nbsp;
+        <i class="fa fa-envelope-open" aria-hidden="true"></i>
+        <%= link_to 'Edit', edit_portal_path(portal) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="btn btn-primary">
+<%= link_to 'New Portal', new_portal_path %>
+</div>
+
+<script type="text/javascript">
+  jQuery.noConflict();
+  (function( $ ) {
+    jQuery(function() {
+      jQuery('#portal').DataTable();
+  });
+  })(jQuery);
+
+</script>
